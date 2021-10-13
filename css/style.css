@@ -1,0 +1,393 @@
+/* Imports
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@import 'normalize.css';
+@import 'reset.css';
+@import 'typography.css';
+
+
+/* Images
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+
+/* Layout
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.wrapper {
+	width: 1328px;
+	padding: 0 24px;
+	margin: 0 auto;
+}
+
+
+/* Map
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.frame {
+	width: 100%;
+	position: relative;
+}
+
+.map {
+	width: 100%;
+	height: 0;
+	padding-top: 76%;
+	position: relative;
+	background: url(../images/map.svg) top right / cover no-repeat;
+}
+
+
+/* Pins
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.pin {
+	position: absolute;
+	z-index: 100;
+	background-color: #000;
+	border-radius: 50%;
+}
+
+.pin::before {
+	content: "";
+	width: 6vw;
+	height: 0;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding-top: 6vw;
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	transform: translateX(-50%);
+}
+
+.pin:hover {
+	z-index: 120;
+}
+
+.pin.js-active {
+	z-index: 110;
+	pointer-events: none;
+	animation: bounce 2s infinite;
+	-webkit-animation: bounce 2s infinite;
+	-moz-animation: bounce 2s infinite;
+	-o-animation: bounce 2s infinite;
+}
+
+@-webkit-keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);}	
+	40% {-webkit-transform: translateY(-10px);}
+	60% {-webkit-transform: translateY(-5px);}
+}
+ 
+@-moz-keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {-moz-transform: translateY(0);}
+	40% {-moz-transform: translateY(-10px);}
+	60% {-moz-transform: translateY(-5px);}
+}
+ 
+@-o-keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {-o-transform: translateY(0);}
+	40% {-o-transform: translateY(-10px);}
+	60% {-o-transform: translateY(-5px);}
+}
+@keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+	40% {transform: translateY(-10px);}
+	60% {transform: translateY(-5px);}
+}
+
+.pin-1 {
+	top: 65%;
+	left: 45%;
+}
+
+.pin-1::before {
+	background-image: url(../images/pin1.svg);
+}
+
+.pin-2 {
+	top: 51%;
+	left: 60%;
+}
+
+.pin-2::before {
+	background-image: url(../images/pin2.svg);
+}
+
+.pin-3 {
+	top: 57%;
+	left: 64%;
+}
+
+.pin-3::before {
+	background-image: url(../images/pin3.svg);
+}
+
+.pin-4 {
+	top: 43%;
+	left: 73%;
+}
+
+.pin-4::before {
+	background-image: url(../images/pin4.svg);
+}
+
+.pin-5 {
+	top: 28%;
+	left: 88%;
+}
+
+.pin-5::before {
+	background-image: url(../images/pin5.svg);
+}
+
+.pin-6 {
+	top: 30%;
+	left: 75%;
+}
+
+.pin-6::before {
+	background-image: url(../images/pin6.svg);
+}
+
+.pin-7 {
+	top: 46%;
+	left: 55%;
+}
+
+.pin-7::before {
+	background-image: url(../images/pin7.svg);
+}
+
+.pin-8 {
+	top: 47%;
+	left: 52%;
+}
+
+.pin-8::before {
+	background-image: url(../images/pin8.svg);
+}
+
+.pin-9 {
+	top: 49%;
+	left: 47%;
+}
+
+.pin-9::before {
+	background-image: url(../images/pin9.svg);
+}
+
+.pin-10 {
+	top: 39%;
+	left: 52%;
+}
+
+.pin-10::before {
+	background-image: url(../images/pin10.svg);
+}
+
+
+/* Info Panel
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.info-panel-wrap {
+	width: 366px;
+	max-width: 29%;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 100;
+	padding: 16px 0 16px 16px;
+	pointer-events: none;
+}
+
+	.info-panel {
+		max-height: 100%;
+		display: grid;
+		grid-template-rows: auto 1fr;
+		position: relative;
+		top: -16px;
+		background-color: #fff;
+		border-radius: 20px;
+		box-shadow: 0 4px 12px rgba(0,0,0,.2);
+		overflow: hidden;
+		visibility: hidden;
+		opacity: 0;
+		transition: .7s ease all;
+	}
+
+	.info-panel-header {
+		display: flex;
+		justify-content: space-between;
+		padding: 12px 8px 12px 12px;
+		background-color: #004A8D;
+		font-size: 1.5rem;
+		color: #fff;
+	}
+
+	.info-panel .icon {
+		width: 26px;
+		height: 26px;
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 8px;
+		background-color: #fff;
+		border-radius: 50%;
+		font-family: 'Montserrat', sans-serif;
+		font-size: 14px;
+		font-weight: 600;
+		font-style: normal;
+		color: #222;
+		text-align: center;
+		line-height: 26px;
+	}
+
+	.info-panel .close {
+		width: 26px;
+		height: 26px;
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	.info-panel .panel {
+		display: none;
+		padding: 24px 16px;
+		overflow-y: auto;
+	}
+
+		.info-panel .panel picture {
+			display: block;
+			padding: 0;
+			text-align: center;
+			content-visibility: auto;
+		}
+
+	.info-panel .reps {
+		padding: 24px 0 0;
+		border-top: 1px solid #ccc;
+	}
+
+/* JS Classes */
+.info-panel-wrap.js-show {
+	pointer-events: all;
+}
+
+	.info-panel-wrap.js-show .info-panel {
+		top: 0;
+		visibility: visible;
+		opacity: 1;
+	}
+
+	.info-panel .panel.js-show {
+		display: block;
+	}
+
+/* 600px */
+@media screen and (max-width: 600px) {
+
+	.info-panel-wrap {
+		width: 100%;
+		max-width: none;
+		position: static;
+		padding: 0;
+	}
+
+	.info-panel {
+		display: none;
+		position: static;
+		visibility: visible;
+		opacity: 1;
+		margin: 1.5rem 1rem .5rem;
+		transition: none;
+	}
+
+	.info-panel-wrap.js-show .info-panel {
+		display: block;
+	}
+	
+}
+
+
+/* Footer
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+footer {
+	padding: 1rem;
+	color: #999;
+	text-align: center;
+	font-size: .8rem;
+}
+
+	footer .logo {
+		width: 24px;
+		display: inline-block;
+		margin-top: .5rem;
+	}
+
+		footer .logo svg {
+			fill: #999;
+			transition: .3s ease all;
+		}
+
+		footer .logo svg:hover {
+			fill: #222;
+		}
+
+
+/* Media Queries
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* 1280px */
+@media screen and (max-width: 1280px) {
+
+	
+	
+}
+
+
+/* 1024px */
+@media screen and (max-width: 1024px) {
+
+	
+	
+}
+
+
+/* 800px */
+@media screen and (max-width: 800px) {
+
+	
+	
+}
+
+
+/* 600px */
+@media screen and (max-width: 600px) {
+
+	
+	
+}
+
+
+/* 414px */
+@media screen and (max-width: 414px) {
+
+	
+	
+}
+
+
+/* 375px */
+@media screen and (max-width: 375px) {
+
+	
+	
+}
+
+
+/* 320px */
+@media screen and (max-width: 320px) {
+
+	
+	
+}

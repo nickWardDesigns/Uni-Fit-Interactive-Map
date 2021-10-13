@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title></title>
+
+<!-- STYLESHEETS -->
+<link rel="stylesheet" href="css/style.css">
+
+<!-- FONTS -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:wght@600&display=swap" rel="stylesheet">
+
+<!--[if lt IE 9]>
+	<script type="text/javascript" src="js/html5shiv-printshiv.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+
+<div class="frame">
+
+	<div class="map">
+		<button type="button" class="pin pin-1" onclick="showPanel(this)" value="#panel-1"></button>
+		<button type="button" class="pin pin-2" onclick="showPanel(this)" value="#panel-2"></button>
+		<button type="button" class="pin pin-3" onclick="showPanel(this)" value="#panel-3"></button>
+		<button type="button" class="pin pin-4" onclick="showPanel(this)" value="#panel-4"></button>
+		<button type="button" class="pin pin-5" onclick="showPanel(this)" value="#panel-5"></button>
+		<button type="button" class="pin pin-6" onclick="showPanel(this)" value="#panel-6"></button>
+		<button type="button" class="pin pin-7" onclick="showPanel(this)" value="#panel-7"></button>
+		<button type="button" class="pin pin-8" onclick="showPanel(this)" value="#panel-8"></button>
+		<button type="button" class="pin pin-9" onclick="showPanel(this)" value="#panel-9"></button>
+		<button type="button" class="pin pin-10" onclick="showPanel(this)" value="#panel-10"></button>
+	</div>
+	
+	<div class="info-panel-wrap">
+		<div class="info-panel">
+			<header class="info-panel-header">
+				<i class="icon"></i>
+				<button type="button" class="close" onclick="closePanel()">&times;</button>
+			</header>
+			
+			<!-- Exercise 1 -->
+			<div id="panel-1" class="panel txt-flow">
+				<h2>Mountain climber sur banc</h2>
+				<picture>
+					<source type="image/svg+xml" srcset="images/exercise_1.svg">
+					<img src="images/exercise_1.jpg" alt="Mountain climber sur banc" width="600" height="410" loading="lazy">
+				</picture>
+				<div class="content txt-flow">
+					<p>En position de planche, les mains sur le banc, amener un genou vers la poitrine. Effectuer le mouvement lentement en alternant les deux jambes. Stabiliser le bassin pour empêcher qu'il bouge. Garder les abdos contractés.</p>
+				</div>
+				<div class="reps"><strong>Répétitions:</strong> 10 - 10</div>
+			</div>
+			
+			<!-- Exercise 2 -->
+			<div id="panel-2" class="panel txt-flow">
+				<h2>Step up avant</h2>
+				<picture>
+					<source type="image/svg+xml" srcset="images/exercise_2.svg">
+					<img src="images/exercise_2.jpg" alt="Step up avant" width="600" height="410" loading="lazy">
+				</picture>
+				<div class="content txt-flow">
+					<p>Garder le dos droit, les abdos contractés et la tête haute. Le banc placé devant vous, monter et descendre en alternant la première jambe pour monter.</p>
+				</div>
+				<div class="reps"><strong>Répétitions:</strong> 10 - 10</div>
+			</div>
+			
+			<!-- Exercise 3 -->
+			<div id="panel-3" class="panel txt-flow">
+				<h2>Push-up incliné sur banc</h2>
+				<picture>
+					<source type="image/svg+xml" srcset="images/exercise_3.svg">
+					<img src="images/exercise_3.jpg" alt="Push-up incliné sur banc" width="600" height="410" loading="lazy">
+				</picture>
+				<div class="content txt-flow">
+					<p>Placer les mains à la largeur des épaules sur le banc. Garder le dos droit et les abdos contractés. Faire des push-ups.</p>
+				</div>
+				<div class="reps"><strong>Répétitions:</strong> 10</div>
+			</div>
+			
+			<!-- Exercise 4 -->
+			<div id="panel-4" class="panel txt-flow">
+				<h2>Squat assis sur une jambe</h2>
+				<picture>
+					<source type="image/svg+xml" srcset="images/exercise_4.svg">
+					<img src="images/exercise_4.jpg" alt="Squat assis sur une jambe" width="600" height="410" loading="lazy">
+				</picture>
+				<div class="content txt-flow">
+					<p>Tenir les mains devant vous. Sur une jambe, descendre jusqu’à ce que vous soyez assis. Revenir à la position de départ en faisant le mouvement inverse. Garder le dos droit et les abdos contractés.</p>
+				</div>
+				<div class="reps"><strong>Répétitions:</strong> 10 - 10</div>
+			</div>
+			
+			<!-- Exercise 5 -->
+			<div id="panel-5" class="panel txt-flow">
+				<h2>Extension des coudes sur banc</h2>
+				<picture>
+					<source type="image/svg+xml" srcset="images/exercise_5.svg">
+					<img src="images/exercise_5.jpg" alt="Extension des coudes sur banc" width="600" height="410" loading="lazy">
+				</picture>
+				<div class="content txt-flow">
+					<p>Les mains en appui sur le bord d'un banc (pronation), les pieds au sol à la largeur des épaules, faire des extensions des coudes. Garder les abdos contractés.</p>
+				</div>
+				<div class="reps"><strong>Répétitions:</strong> 10</div>
+			</div>
+			
+			<!-- Exercise 6 -->
+			<div id="panel-6" class="panel txt-flow">
+				<h2>Abduction rapide de jambe en planche latérale</h2>
+				<picture>
+					<source type="image/svg+xml" srcset="images/exercise_6.svg">
+					<img src="images/exercise_6.jpg" alt="Abduction rapide de jambe en planche latérale" width="600" height="410" loading="lazy">
+				</picture>
+				<div class="content txt-flow">
+					<p>Couché sur le côté en appui sur l'avant-bras sur le banc, faire des abductions rapides de la jambe. Garder le coude aligné avec l'épaule, les abdos contractés et la jambe de soutien alignée avec le corps.</p>
+				</div>
+				<div class="reps"><strong>Répétitions:</strong> 10 - 10</div>
+			</div>
+			
+			<!-- Exercise 7 -->
+			<div id="panel-7" class="panel txt-flow">
+				<h2>Jackknife crunch sur banc</h2>
+				<picture>
+					<source type="image/svg+xml" srcset="images/exercise_7.svg">
+					<img src="images/exercise_7.jpg" alt="Jackknife crunch sur banc" width="600" height="410" loading="lazy">
+				</picture>
+				<div class="content txt-flow">
+					<p>Assis en équilibre sur le bout du banc, faire des flexions et des extensions. Les jambes croisées, garder les genoux légèrement fléchis et les abdos contractés.</p>
+				</div>
+				<div class="reps"><strong>Répétitions:</strong> 10</div>
+			</div>
+			
+			<!-- Exercise 8 -->
+			<div id="panel-8" class="panel txt-flow">
+				<h2>Hip thrust unilatéral sur une jambe</h2>
+				<picture>
+					<source type="image/svg+xml" srcset="images/exercise_8.svg">
+					<img src="images/exercise_8.jpg" alt="Hip thrust unilatéral sur une jambe" width="600" height="410" loading="lazy">
+				</picture>
+				<div class="content txt-flow">
+					<p>Débuter assis le dos appuyé sur le banc. Placer un pied au sol, genou à environ 90°, l'autre jambe allongée le pied ne touchant pas le sol. Lever le bassin verticalement en alignant les cuisses avec le corps et en gardant la jambe à l'horizontale. Revenir à la position de départ et répéter. Garder le dos droit et la tête alignée avec le corps.</p>
+				</div>
+				<div class="reps"><strong>Répétitions:</strong> 10 - 10</div>
+			</div>
+			
+			<!-- Exercise 9 -->
+			<div id="panel-9" class="panel txt-flow">
+				<h2>Montées de genoux sur banc</h2>
+				<picture>
+					<source type="image/svg+xml" srcset="images/exercise_9.svg">
+					<img src="images/exercise_9.jpg" alt="Montées de genoux sur banc" width="600" height="410" loading="lazy">
+				</picture>
+				<div class="content txt-flow">
+					<p>Lever un genou de façon à déposer le pied sur le banc. Alterner, en levant l’autre genou et en déposant l’autre pied sur le banc. Continuer à faire le mouvement du coureur, en déplaçant le bras avec la jambe opposée. Effectuer le travail sur le devant des pieds. Garder la tête haute, le dos droit et les abdos contractés.</p>
+				</div>
+				<div class="reps"><strong>Répétitions:</strong> 10 - 10</div>
+			</div>
+			
+			<!-- Exercise 10 -->
+			<div id="panel-10" class="panel txt-flow">
+				<h2>Extension des chevilles</h2>
+				<picture>
+					<source type="image/svg+xml" srcset="images/exercise_10.svg">
+					<img src="images/exercise_10.jpg" alt="Extension des chevilles" width="600" height="410" loading="lazy">
+				</picture>
+				<div class="content txt-flow">
+					<p>En appui sur le dos du banc, faire des extensions des chevilles. Garder le dos droit et les abdos tendus. Garder la tête au-dessus des pieds.</p>
+				</div>
+				<div class="reps"><strong>Répétitions:</strong> 10</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<footer>
+	<div>Made by Nick Ward Designs</div>
+	<div class="logo">
+		<a href="http://nickwarddesigns.com" target="_blank" title="Made by Nick Ward Designs">
+			<svg width="100%" height="100%" viewBox="0 0 200 200" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+				<title>Nick Ward Designs</title>
+				<g transform="matrix(1,0,0,1,-220,-100)">
+					<g transform="matrix(1,0,0,1,-180,-100)">
+						<path d="M600,200L560,240L560,360L540,340L520,360L520,200L400,200L400,400L440,360L440,240L480,240L480,400L600,400L600,200Z"/>
+					</g>
+				</g>
+			</svg>
+		</a>
+	</div>
+</footer>
+
+<!-- SCRIPTS -->
+<script src="js/custom.js"></script>
+
+</body>
+</html>
